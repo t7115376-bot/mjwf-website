@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Murarijyoti Welfare Foundation</title>
+<meta name="description" content="Get in touch with Murarijyoti Welfare Foundation — email, phone, and our registered office in Gogri Jamalpur, Khagaria, Bihar." />
+<link rel="canonical" href="contact.html" />
+<link rel="icon" href="logo.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Murarijyoti Welfare Foundation" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:title" content="Contact — Murarijyoti Welfare Foundation" />
+<meta property="og:description" content="Email, phone, and our registered office in Gogri Jamalpur, Khagaria, Bihar. We read every message ourselves." />
+<meta property="og:image" content="photos/IMG_0752.jpeg" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* contact form — built on the existing card system */
+  .cform { display: grid; gap: 18px; }
+  .cform .row { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .cform .row { grid-template-columns: 1fr 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field label { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); font-weight: 500; }
+  .field input, .field select, .field textarea {
+    font-family: var(--sans); font-size: 16px; color: var(--ink); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 10px; padding: 13px 15px; width: 100%;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .field textarea { resize: vertical; min-height: 128px; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(28,26,21,0.08);
+  }
+  .cform__note { font-size: 13.5px; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar" id="topbar" data-screen-label="Header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Murarijyoti Welfare Foundation — home">
+        <img class="brand__logo" src="logo.svg" alt="" width="44" height="44" />
+        <span class="brand__text">
+          <span class="brand__name">Murarijyoti <em>Welfare</em> Foundation</span>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programmes</a>
+        <a href="partners.html">Partners</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="navactions">
+        <a href="get-involved.html" class="nav__ghost">Get Involved</a>
+        <a href="donate.html" class="nav__donate">Donate</a>
+      </div>
+      <button class="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="mm" onclick="var m=document.getElementById('mm');var o=m.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobilemenu" id="mm">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programmes</a>
+      <a href="partners.html">Partners</a>
+        <a href="gallery.html">Gallery</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero2" data-screen-label="Hero">
+  <div class="wrap hero2__inner reveal">
+    <p class="hero2__badge">Contact · We read every message ourselves</p>
+    <h1 class="hero2__head">Get in <em>touch.</em></h1>
+    <p class="hero2__lede">We are based in Gogri Jamalpur, Khagaria. Whether you want to volunteer, partner, donate, or simply ask a question — write to us or call us directly.</p>
+    <p class="hero2__tag">We aim to respond within three working days.</p>
+    <div class="hero2__cta">
+      <a href="mailto:mjwfoundationn@gmail.com" class="btn btn--primary">Email us <span class="arrow">→</span></a>
+      <a href="tel:+919324086061" class="btn btn--ghost">+91 93240 86061</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT CARDS ============ -->
+<section class="section" data-screen-label="Reach us">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 01</span> Reach us</p>
+      <h2 class="dhead">Three ways to <em>reach us.</em></h2>
+    </div>
+    <div class="contactgrid">
+      <article class="contactcard reveal">
+        <p class="contactcard__k">Email</p>
+        <p class="contactcard__v"><a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a></p>
+        <p class="contactcard__note">We read every message ourselves and reply within three working days.</p>
+      </article>
+      <article class="contactcard reveal">
+        <p class="contactcard__k">Phone</p>
+        <p class="contactcard__v"><a href="tel:+919324086061">+91 93240 86061</a></p>
+        <p class="contactcard__note">Call us directly. If your matter is urgent, say so and we will prioritise it.</p>
+      </article>
+      <article class="contactcard reveal">
+        <p class="contactcard__k">Address</p>
+        <p class="contactcard__v">Gogri Jamalpur,<br />Khagaria, Bihar, India</p>
+        <p class="contactcard__note">Our registered office, in the community we serve.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM + PROMISE ============ -->
+<section class="section section--cream" data-screen-label="Write to us">
+  <div class="wrap">
+    <div class="givegrid">
+      <!-- form -->
+      <div class="card reveal">
+        <p class="card__kicker">Write to us</p>
+        <h3 style="margin-bottom:6px;">Send us a message.</h3>
+        <p style="color:var(--muted); font-size:15px; margin:0 0 24px;">Fill this in and it will open in your email app, ready to send to us.</p>
+        <form class="cform" id="cform">
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Your email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-subject">What is this about?</label>
+            <select id="f-subject" name="subject">
+              <option value="General enquiry">General enquiry</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Collaboration">Collaboration / partnership</option>
+              <option value="Donation">Donation</option>
+              <option value="Media Enquiry">Media enquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Your message</label>
+            <textarea id="f-message" name="message" placeholder="Tell us where you are based and how you would like to help, or what you would like to know." required></textarea>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center;">
+            <button type="submit" class="btn btn--primary">Open in email <span class="arrow">→</span></button>
+            <p class="cform__note">Goes to mjwfoundationn@gmail.com</p>
+          </div>
+          <p class="cform__note" id="cform-fallback" hidden style="margin-top:14px;">If your email app did not open, please write to us directly at <a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a>.</p>
+        </form>
+      </div>
+
+      <!-- promise / media -->
+      <div class="reveal" style="display:flex; flex-direction:column; gap:24px;">
+        <div class="card">
+          <p class="card__kicker">Our promise</p>
+          <p class="promise__big" style="margin:0;">We read every message <em>ourselves.</em> No call centre, no auto-reply — a small team, replying within three working days.</p>
+        </div>
+        <div class="card card--ink">
+          <p class="card__kicker" style="color:var(--marigold);">For media enquiries</p>
+          <h3 style="margin-bottom:10px;">Journalists &amp; researchers</h3>
+          <p style="color:#C7C1B4; margin:0 0 18px;">If you would like to know more about our work, write to us with the subject line “Media Enquiry” and we will get back to you.</p>
+          <a href="mailto:mjwfoundationn@gmail.com?subject=Media%20Enquiry" class="cardlink" style="color:#fff;">Media enquiry <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTRATION ============ -->
+<section class="section" data-screen-label="Registration">
+  <div class="wrap">
+    <div class="twocol">
+      <div class="note">
+        <p class="eyebrow">Registration</p>
+        <h3>A registered Section 8 non-profit.</h3>
+        <p>Murarijyoti Welfare Foundation is a Section 8 Company under the Companies Act, 2013, registered under Sections 12A and 80G of the Income Tax Act, 1961.</p>
+        <div class="badgerow">
+          <span class="badge80">Section 8 Company</span>
+          <span class="badge80">12A Registered</span>
+          <span class="badge80">80G Certified</span>
+        </div>
+        <p style="font-family: var(--mono); font-size: 13px; color: var(--muted); margin-top: 20px;">Registration no. U88900BR2023NPL066704</p>
+      </div>
+      <div class="note">
+        <p class="eyebrow">Other ways to help</p>
+        <h3>Volunteer, partner, or give.</h3>
+        <p>There is a place for everyone who wants to be part of the work — not just support it from a distance. Tell us where you are and what you can offer.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:22px;">
+          <a href="get-involved.html" class="btn btn--ghost">Get involved <span class="arrow">→</span></a>
+          <a href="donate.html" class="btn btn--primary">Donate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__wordmark">Murarijyoti <em>Welfare</em><br />Foundation.</p>
+        <p class="footer__statement">A Section 8 not-for-profit working with communities across Khagaria and Bhagalpur on menstrual health, cervical cancer prevention, community health, and school education.</p>
+        <p class="footer__tag">We work with communities, not for them.</p>
+      </div>
+      <div>
+        <h4>Programmes</h4>
+        <nav class="footer__navlist" aria-label="Programmes">
+          <a href="programs.html#menstrual">Menstrual Health &amp; Cups</a>
+          <a href="programs.html#cervical">Cervical Cancer Prevention</a>
+          <a href="programs.html#camps">Community Health Camps</a>
+          <a href="programs.html#school">School Education</a>
+          <a href="partners.html">Our Partners</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <p class="footer__reg">
+          Registered Office · Khagaria<br />
+          Gogri Jamalpur, Khagaria,<br />Bihar, India
+        </p>
+        <p class="footer__reg" style="margin-top:16px;">
+          Registration: U88900BR2023NPL066704<br />
+          Section 8 · 80G Certified · 12A Registered
+        </p>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <p class="footer__reg">
+          <a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a><br />
+          <a href="tel:+919324086061">+91 93240 86061</a>
+        </p>
+        <nav class="footer__navlist" style="margin-top:16px;" aria-label="Connect">
+          <a href="get-involved.html">Volunteer with us</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Murarijyoti Welfare Foundation · All rights reserved.</span>
+      <span>Section 8 Company under the Companies Act 2013</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bar = document.getElementById('topbar');
+  function onScroll(){ if (window.scrollY > 24) bar.classList.add('scrolled'); else bar.classList.remove('scrolled'); }
+  window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+})();
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.reveal'));
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e); });
+})();
+/* mailto form */
+(function(){
+  var form = document.getElementById('cform');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = (document.getElementById('f-name').value || '').trim();
+    var email = (document.getElementById('f-email').value || '').trim();
+    var subject = document.getElementById('f-subject').value || 'General enquiry';
+    var message = (document.getElementById('f-message').value || '').trim();
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+    var href = 'mailto:mjwfoundationn@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = href;
+    var fb = document.getElementById('cform-fallback');
+    if (fb) fb.hidden = false;
+  });
+})();
+</script>
+
+</body>
+</html>
