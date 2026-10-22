@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reports &amp; Press — Murarijyoti Welfare Foundation</title>
+<meta name="description" content="Activity reports, press coverage, and awards for Murarijyoti Welfare Foundation — a Section 8 non-profit working on public health in rural Bihar." />
+<link rel="canonical" href="reports.html" />
+<link rel="icon" href="logo.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Murarijyoti Welfare Foundation" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:title" content="Reports &amp; Press — Murarijyoti Welfare Foundation" />
+<meta property="og:description" content="Activity reports, press coverage, and awards for Murarijyoti Welfare Foundation." />
+<meta property="og:image" content="photos/IMG_0752.jpeg" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ---- reports page local styles ---- */
+.reportcard {
+  background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+  padding: clamp(28px,3.2vw,42px); display: flex; flex-direction: column;
+  gap: 20px; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.reportcard:hover { transform: translateY(-4px); box-shadow: 0 28px 60px -34px rgba(28,26,21,0.45); border-color: #D9D3C6; }
+.reportcard__meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.reportcard__year { font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); font-weight: 500; }
+.reportcard__badge { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--body); background: var(--green-wash); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; }
+.reportcard__title { font-size: clamp(22px,2.6vw,30px); color: var(--ink); margin: 0; }
+.reportcard__desc { color: var(--body); font-size: var(--fs-card-body); margin: 0; max-width: 60ch; }
+.reportcard__dl {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--ink); color: #fff; font-weight: 600; font-size: 15px;
+  padding: 13px 24px; border-radius: 8px; transition: background .15s; align-self: flex-start;
+}
+.reportcard__dl:hover { background: #000; color: #fff; }
+.reportcard__dl svg { flex: none; }
+
+.pressrow { display: grid; gap: clamp(16px,2vw,22px); grid-template-columns: 1fr; }
+@media (min-width: 660px) { .pressrow { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1020px) { .pressrow { grid-template-columns: repeat(3, 1fr); } }
+
+.pressitem {
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  padding: clamp(22px,2.4vw,32px); display: flex; flex-direction: column; gap: 10px;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.pressitem:hover { transform: translateY(-4px); box-shadow: 0 26px 56px -34px rgba(28,26,21,0.45); border-color: #D9D3C6; }
+.pressitem__pub { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); font-weight: 500; }
+.pressitem__date { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--muted); }
+.pressitem__head { font-family: var(--serif); font-size: clamp(16px,1.8vw,19px); color: var(--ink); line-height: 1.3; margin: 0; }
+.pressitem__link { font-weight: 600; font-size: 14px; color: var(--red); display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 8px; }
+.pressitem__link:hover { color: var(--red-deep); }
+.pressitem__link .arrow { transition: transform .15s; }
+.pressitem__link:hover .arrow { transform: translateX(3px); }
+
+.awardcard {
+  background: var(--ink); color: #D8D3C8; border-radius: 16px;
+  padding: clamp(36px,4.5vw,60px); display: grid; gap: clamp(28px,4vw,56px);
+  grid-template-columns: 1fr; align-items: center;
+}
+@media (min-width: 820px) { .awardcard { grid-template-columns: 1fr 1.4fr; } }
+.awardcard__kicker { font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--marigold); margin: 0 0 var(--gap-label); font-weight: 500; }
+.awardcard__name { font-family: var(--serif); font-weight: 600; color: #fff; font-size: clamp(26px,3.4vw,40px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 18px; }
+.awardcard__by { font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--marigold); margin: 0 0 20px; }
+.awardcard__text { color: #B8B1A4; font-size: var(--fs-card-body); line-height: 1.6; margin: 0 0 1em; }
+.awardcard__text:last-child { margin: 0; }
+.awardcard__date { font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.1em; text-transform: uppercase; color: #6E685C; margin-top: 24px; }
+.awardcard__side { display: flex; flex-direction: column; gap: 20px; }
+.awardpill {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: clamp(18px,2.2vw,26px);
+}
+.awardpill__no { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6E685C; margin: 0 0 8px; }
+.awardpill__text { color: #D8D3C8; font-size: 15px; line-height: 1.5; margin: 0; }
+</style>
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar" id="topbar" data-screen-label="Header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Murarijyoti Welfare Foundation — home">
+        <img class="brand__logo" src="logo.svg" alt="" width="44" height="44" />
+        <span class="brand__text">
+          <span class="brand__name">Murarijyoti <em>Welfare</em> Foundation</span>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programmes</a>
+        <a href="partners.html">Partners</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reports.html" class="active">Reports</a>
+      </div>
+      <div class="navactions">
+        <a href="get-involved.html" class="nav__ghost">Get Involved</a>
+        <a href="donate.html" class="nav__donate">Donate</a>
+      </div>
+      <button class="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="mm" onclick="var m=document.getElementById('mm');var o=m.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobilemenu" id="mm">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programmes</a>
+      <a href="partners.html">Partners</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reports.html">Reports</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="donate.html">Donate</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ PAGE INTRO ============ -->
+<section class="section" data-screen-label="Page intro">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 01</span> Transparency &amp; record</p>
+      <h1 class="dhead">Reports, press <em>&amp; awards.</em></h1>
+      <p class="dhead__lede">Our activity reports, media coverage, and external recognition — a public record of what we have done and who has taken notice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITY REPORTS ============ -->
+<section class="section section--cream" data-screen-label="Activity reports">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 02</span> Activity reports</p>
+      <h2 class="dhead">What we <em>did.</em></h2>
+      <p class="dhead__lede">Our activity reports document every programme, session, and relief effort by date, place, and people reached.</p>
+    </div>
+
+    <div class="reveal">
+      <article class="reportcard">
+        <div class="reportcard__meta">
+          <span class="reportcard__year">2024 – 2026</span>
+          <span class="reportcard__badge">35 activities</span>
+          <span class="reportcard__badge">PDF · 17 MB</span>
+        </div>
+        <h3 class="reportcard__title">MJWF Activity Report 2026</h3>
+        <p class="reportcard__desc">A complete record of all 35 activities across menstrual health, adolescent education, cervical cancer research, NCD health camps, and flood relief — submitted in support of Section 80G and 12A registration. Covers February 2024 to October 2026.</p>
+        <a href="MJWF-Activity-Report-2026.pdf" download class="reportcard__dl" aria-label="Download MJWF Activity Report 2026 PDF">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 4v10m0 0l-3-3m3 3l3-3M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download PDF
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JUNOON AWARD ============ -->
+<section class="section" data-screen-label="Junoon Award">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 03</span> Recognition</p>
+      <h2 class="dhead">External <em>recognition.</em></h2>
+    </div>
+
+    <div class="awardcard reveal">
+      <div>
+        <p class="awardcard__kicker">Award</p>
+        <h3 class="awardcard__name">Junoon Award</h3>
+        <p class="awardcard__by">by Goonj · May 2026</p>
+        <p class="awardcard__text">MurariJyoti Welfare Foundation was selected as a Junoon Awardee by Goonj — recognised as a grassroots organisation working in health, mental health, and hygiene in rural Bihar.</p>
+        <p class="awardcard__text">The award was received in New Delhi at Goonj's Menstruation Dialogue 2026 special edition. Tejaswini also spoke as a panelist at the event.</p>
+        <p class="awardcard__date">May 2026 · New Delhi</p>
+      </div>
+      <div class="awardcard__side">
+        <div class="awardpill">
+          <p class="awardpill__no">About Goonj</p>
+          <p class="awardpill__text">Goonj is one of India's most recognised non-profits, known for dignity-driven disaster relief and community development. The Junoon Award recognises grassroots organisations with impact at scale.</p>
+        </div>
+        <div class="awardpill">
+          <p class="awardpill__no">Menstruation Dialogue 2026</p>
+          <p class="awardpill__text">An annual forum bringing together practitioners, advocates, and grassroots organisations working on menstrual health across India. Tejaswini participated as a speaker alongside other awardees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESS COVERAGE ============ -->
+<section class="section section--cream" data-screen-label="Press coverage">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 04</span> Press &amp; media</p>
+      <h2 class="dhead">How the press <em>covered us.</em></h2>
+      <p class="dhead__lede">Coverage in national and regional media, in print and online, from 2024 to 2026.</p>
+    </div>
+
+    <div class="pressrow">
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">YourStory</p>
+        <p class="pressitem__date">August 2026</p>
+        <h3 class="pressitem__head">How Tejaswini's MurariJyoti Welfare Foundation is transforming women's lives in Bihar</h3>
+        <a href="https://yourstory.com/2026/08/tejaswini-murarijyoti-welfare-foundation-bihar-women-health" class="pressitem__link" target="_blank" rel="noopener">Read article <span class="arrow">→</span></a>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">YourStory Hindi</p>
+        <p class="pressitem__date">August 2026</p>
+        <h3 class="pressitem__head">बिहार में महिलाओं के स्वास्थ्य पर काम कर रही MurariJyoti Welfare Foundation</h3>
+        <a href="https://yourstory.com/hindi/tejaswini-murari-jyoti-welfare-foundation-mjwf-bihar-women-health" class="pressitem__link" target="_blank" rel="noopener">Read article <span class="arrow">→</span></a>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">Times of India</p>
+        <p class="pressitem__date">2026</p>
+        <h3 class="pressitem__head">How Tejaswini's MurariJyoti Welfare Foundation is transforming women's lives in Bihar</h3>
+        <p class="pressitem__link" style="color:var(--muted);cursor:default;">Print &amp; online feature</p>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">Zee News</p>
+        <p class="pressitem__date">2026</p>
+        <h3 class="pressitem__head">Cervical cancer research project with 10zyme broadcast as a video story</h3>
+        <a href="https://www.instagram.com/reel/C7Pe6frB2ia/" class="pressitem__link" target="_blank" rel="noopener">Watch reel <span class="arrow">→</span></a>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">Prabhat Khabar</p>
+        <p class="pressitem__date">19 March 2026</p>
+        <h3 class="pressitem__head">Special research on cervical cancer at Bihpur CHC — doctor from England and Tejaswini of Jamalpur</h3>
+        <p class="pressitem__link" style="color:var(--muted);cursor:default;">Print coverage</p>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">Hindustan</p>
+        <p class="pressitem__date">September – October 2026</p>
+        <h3 class="pressitem__head">Flood relief: napkins and clean water given to women; food packets reach flood-affected families</h3>
+        <p class="pressitem__link" style="color:var(--muted);cursor:default;">Print coverage · Multiple editions</p>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">The Bharat Project</p>
+        <p class="pressitem__date">2026</p>
+        <h3 class="pressitem__head">How MJWF translates health awareness into economic empowerment for rural women</h3>
+        <a href="https://www.linkedin.com/posts/thebharatproject_bihar-womenhealth-womenempowerment-activity-7497987161661718528-ZEyd" class="pressitem__link" target="_blank" rel="noopener">Read on LinkedIn <span class="arrow">→</span></a>
+      </article>
+
+      <article class="pressitem reveal">
+        <p class="pressitem__pub">Hindustan</p>
+        <p class="pressitem__date">Multiple editions, 2024–2026</p>
+        <h3 class="pressitem__head">Health camps, menstrual awareness, and NCD screenings — ongoing regional coverage</h3>
+        <p class="pressitem__link" style="color:var(--muted);cursor:default;">Print coverage · Khagaria &amp; Bhagalpur</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="section section--cta" data-screen-label="Closing CTA">
+  <div class="wrap ctaband reveal">
+    <p class="smark"><span class="smark__no">§ 05</span> Support the work</p>
+    <p class="ctaband__line">Every rupee goes directly into programmes. No overheads. No intermediaries. Just the work.</p>
+    <div class="hero2__cta">
+      <a href="donate.html" class="btn btn--onink">Donate <span class="arrow">→</span></a>
+      <a href="get-involved.html" class="btn btn--ghostlight">Get involved</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <p class="footer__wordmark">Murarijyoti <em>Welfare</em><br />Foundation.</p>
+        <p class="footer__tag">We work with communities, not for them.</p>
+      </div>
+      <div>
+        <nav class="footer__navlist" aria-label="Site pages">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="programs.html">Programmes</a>
+          <a href="partners.html">Partners</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="reports.html">Reports</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <p class="footer__reg">
+          Jyoti Diagnostic, Opposite Gogri Thana,<br />Gogri, Bihar
+        </p>
+        <p class="footer__reg" style="margin-top:16px;">
+          Registration: U88900BR2023NPL066704<br />
+          Section 8 · 80G Certified · 12A Registered
+        </p>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <p class="footer__reg">
+          <a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a><br />
+          <a href="tel:+919324086061">+91 93240 86061</a>
+        </p>
+        <nav class="footer__navlist" style="margin-top:16px;" aria-label="Connect">
+          <a href="get-involved.html">Volunteer with us</a>
+          <a href="donate.html">Donate</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Murarijyoti Welfare Foundation · All rights reserved.</span>
+      <span>Section 8 Company under the Companies Act 2013</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bar = document.getElementById('topbar');
+  function onScroll(){ if (window.scrollY > 24) bar.classList.add('scrolled'); else bar.classList.remove('scrolled'); }
+  window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+})();
+(function(){
+  var els = [].slice.call(document.querySelectorAll('.reveal'));
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+
+</body>
+</html>
