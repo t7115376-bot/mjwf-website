@@ -705,3 +705,11 @@ textarea:focus-visible, .btn:focus-visible, [tabindex]:focus-visible {
   .gitem__scrim { opacity: 1; }
   .gitem__tag { opacity: 1; transform: none; }
 }
+
+/* ---------- trust strip (homepage award badge) ---------- */
+.truststrip { background: var(--cream); border-bottom: 1px solid var(--line); padding: 10px 0; }
+.trustpill { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding: 8px 16px; border: 1px solid var(--line); border-radius: 100px; transition: background .15s, border-color .15s; }
+.trustpill:hover { background: var(--paper); border-color: var(--ink); }
+.trustpill__label { font-weight: 600; }
+.trustpill__by { color: var(--muted); }
+.trustpill__arrow { font-size: 14px; }

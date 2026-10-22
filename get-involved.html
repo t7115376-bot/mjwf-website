@@ -14,6 +14,17 @@
 <meta property="og:description" content="Whether you have an afternoon or an institution behind you, there is a way to be part of the work." />
 <meta property="og:image" content="photos/IMG_0027.jpg" />
 <link rel="stylesheet" href="styles.css" />
+<style>
+  .cform { display: grid; gap: 18px; }
+  .cform .row { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .cform .row { grid-template-columns: 1fr 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field label { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); font-weight: 500; }
+  .field input, .field select, .field textarea { font-family: var(--sans); font-size: 16px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 13px 15px; width: 100%; transition: border-color .15s, box-shadow .15s; }
+  .field textarea { resize: vertical; min-height: 128px; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(28,26,21,0.08); }
+  .cform__note { font-size: 13.5px; color: var(--muted); margin: 0; }
+</style>
 </head>
 <body>
 <a class="skiplink" href="#main">Skip to content</a>
@@ -32,7 +43,6 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programmes</a>
-        <a href="partners.html">Partners</a>
         <a href="reports.html">Media</a>
       </div>
       <div class="navactions">
@@ -47,7 +57,6 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="programs.html">Programmes</a>
-      <a href="partners.html">Partners</a>
         <a href="reports.html">Media</a>
       <a href="get-involved.html">Get Involved</a>
       <a href="donate.html">Donate</a>
@@ -76,12 +85,12 @@
   <div class="wrap">
     <div class="statrow">
       <div class="stat reveal">
-        <p class="stat__num"><span class="count" data-target="1200" data-suffix="+">0</span></p>
+        <p class="stat__num"><span class="count" data-target="2500" data-suffix="+">0</span></p>
         <p class="stat__label">Women reached</p>
         <p class="stat__note">And every one of them a neighbour</p>
       </div>
       <div class="stat reveal">
-        <p class="stat__num"><span class="count" data-target="670">0</span></p>
+        <p class="stat__num"><span class="count" data-target="800" data-suffix="+">0</span></p>
         <p class="stat__label">Free screenings</p>
         <p class="stat__note">Run entirely by a small team</p>
       </div>
@@ -105,14 +114,14 @@
     <span class="marquee__set">
       <span>❋ Menstrual Health &amp; Cup Distribution · 500 cups distributed</span>
       <span>❋ Cervical Cancer Prevention · 2 research phases, UK &amp; India</span>
-      <span>❋ Community Health Camps · 670 free screenings</span>
+      <span>❋ Community Health Camps · 800+ free screenings</span>
       <span>❋ School Education · 10+ schools reached</span>
       <span>❋ Khagaria &amp; Bhagalpur · Since 2023</span>
     </span>
     <span class="marquee__set">
       <span>❋ Menstrual Health &amp; Cup Distribution · 500 cups distributed</span>
       <span>❋ Cervical Cancer Prevention · 2 research phases, UK &amp; India</span>
-      <span>❋ Community Health Camps · 670 free screenings</span>
+      <span>❋ Community Health Camps · 800+ free screenings</span>
       <span>❋ School Education · 10+ schools reached</span>
       <span>❋ Khagaria &amp; Bhagalpur · Since 2023</span>
     </span>
@@ -191,7 +200,7 @@
     <div class="joinrow reveal">
       <a class="joinpill" href="programs.html#menstrual">
         <span class="joinpill__name">Menstrual Health &amp; Cup Distribution</span>
-        <span class="joinpill__meta">1200+ women · 500 cups</span>
+        <span class="joinpill__meta">2,500+ women · 500 cups</span>
         <span class="joinpill__arrow arrow">→</span>
       </a>
       <a class="joinpill" href="programs.html#cervical">
@@ -201,7 +210,7 @@
       </a>
       <a class="joinpill" href="programs.html#camps">
         <span class="joinpill__name">Community Health Camps</span>
-        <span class="joinpill__meta">670 screenings · Every 3 months</span>
+        <span class="joinpill__meta">800+ screenings · Every 3 months</span>
         <span class="joinpill__arrow arrow">→</span>
       </a>
       <a class="joinpill" href="programs.html#school">
@@ -213,16 +222,77 @@
   </div>
 </section>
 
-<!-- ============ 6 · CLOSING CTA ============ -->
+<!-- ============ 6 · CONTACT ============ -->
+<section class="section" id="contact" data-screen-label="Contact us">
+  <div class="wrap">
+    <div class="sectionhead reveal">
+      <p class="smark"><span class="smark__no">§ 03</span> Get in touch</p>
+      <h2 class="dhead">Write to us. <em>We read every message ourselves.</em></h2>
+      <p class="dhead__lede">No call centre, no auto-reply. A small team, replying within three working days.</p>
+    </div>
+    <div class="givegrid">
+      <!-- form -->
+      <div class="card reveal">
+        <p class="card__kicker">Send us a message</p>
+        <p style="color:var(--muted); font-size:15px; margin:0 0 24px;">Fill this in and it will open in your email app, ready to send to us.</p>
+        <form class="cform" id="cform">
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Your email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-subject">What is this about?</label>
+            <select id="f-subject" name="subject">
+              <option value="General enquiry">General enquiry</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Collaboration">Collaboration / partnership</option>
+              <option value="Donation">Donation</option>
+              <option value="Media Enquiry">Media enquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Your message</label>
+            <textarea id="f-message" name="message" placeholder="Tell us where you are based and how you would like to help, or what you would like to know." required></textarea>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center;">
+            <button type="submit" class="btn btn--primary">Open in email <span class="arrow">→</span></button>
+            <p class="cform__note">Goes to mjwfoundationn@gmail.com</p>
+          </div>
+          <p class="cform__note" id="cform-fallback" hidden style="margin-top:14px;">If your email app did not open, please write to us directly at <a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a>.</p>
+        </form>
+      </div>
+      <!-- contact cards -->
+      <div class="reveal" style="display:flex; flex-direction:column; gap:24px;">
+        <div class="card">
+          <p class="card__kicker">Email</p>
+          <p style="font-size:clamp(17px,2vw,20px); font-family:var(--serif); margin:4px 0 8px;"><a href="mailto:mjwfoundationn@gmail.com">mjwfoundationn@gmail.com</a></p>
+          <p style="color:var(--muted); font-size:14px; margin:0;">We reply within three working days.</p>
+        </div>
+        <div class="card">
+          <p class="card__kicker">Phone</p>
+          <p style="font-size:clamp(17px,2vw,20px); font-family:var(--serif); margin:4px 0 8px;"><a href="tel:+919324086061">+91 93240 86061</a></p>
+          <p style="color:var(--muted); font-size:14px; margin:0;">Call us directly.</p>
+        </div>
+        <div class="card card--ink">
+          <p class="card__kicker" style="color:var(--marigold);">Address</p>
+          <p style="color:#C7C1B4; margin:4px 0 0;">Jyoti Diagnostic, Opposite Gogri Thana,<br />Gogri, Bihar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · CLOSING CTA ============ -->
 <section class="section section--cta" data-screen-label="Closing CTA">
   <div class="wrap ctaband reveal">
-    <p class="smark"><span class="smark__no">§ 03</span> Take the first step</p>
-    <p class="ctaband__line">It started with a <em>conversation.</em> Yours can too: write to us, call us, or set up a gift today.</p>
-    <p class="cta__contacts">
-      <a href="mailto:mjwfoundationn@gmail.com?subject=Get%20Involved">mjwfoundationn@gmail.com</a>
-      <span aria-hidden="true">·</span>
-      <a href="tel:+919324086061">+91 93240 86061</a>
-    </p>
+    <p class="smark"><span class="smark__no">§ 04</span> Take the first step</p>
+    <p class="ctaband__line">It started with a <em>conversation.</em> Yours can too.</p>
     <div class="hero2__cta">
       <a href="donate.html" class="btn btn--onink">Donate <span class="arrow">→</span></a>
       <a href="mailto:mjwfoundationn@gmail.com?subject=Volunteer" class="btn btn--ghostlight">Volunteer with us</a>
@@ -245,8 +315,7 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="programs.html">Programmes</a>
-          <a href="partners.html">Partners</a>
-          <a href="reports.html">Media</a>
+            <a href="reports.html">Media</a>
         </nav>
       </div>
       <div>
@@ -268,7 +337,7 @@
         <nav class="footer__navlist" style="margin-top:16px;" aria-label="Connect">
           <a href="get-involved.html">Volunteer with us</a>
           <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact</a>
+          <a href="get-involved.html#contact">Contact</a>
         </nav>
       </div>
     </div>
@@ -303,6 +372,25 @@
   if (!('IntersectionObserver' in window)){ counters.forEach(function(c){ c.textContent = c.getAttribute('data-target') + (c.getAttribute('data-suffix')||''); }); return; }
   var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting){ animate(en.target); io.unobserve(en.target); } }); }, { threshold: 0.6 });
   counters.forEach(function(c){ io.observe(c); });
+})();
+/* mailto form */
+(function(){
+  var form = document.getElementById('cform');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = (document.getElementById('f-name').value || '').trim();
+    var email = (document.getElementById('f-email').value || '').trim();
+    var subject = document.getElementById('f-subject').value || 'General enquiry';
+    var message = (document.getElementById('f-message').value || '').trim();
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+    var href = 'mailto:mjwfoundationn@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = href;
+    var fb = document.getElementById('cform-fallback');
+    if (fb) fb.hidden = false;
+  });
 })();
 </script>
 
